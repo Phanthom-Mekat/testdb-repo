@@ -8,12 +8,12 @@ const pool =mysql.createPool({
     connectionLimit: 10
 });
 
-// pool.query('select * from tbl_review', (err, results, fields) => {
-//     if(err){
-//         return console.log(err.message);
-//     }
-//     return console.log(results);
-// });
+pool.query('select * from tbl_review', (err, results, fields) => {
+    if(err){
+        return console.log(err.message);
+    }
+    return console.log(results);
+});
 
 // const ReviewID = 60000008;
 // pool.query('select * from tbl_review where ReviewID=? ',[ReviewID], (err, results, fields) => {
